@@ -1,0 +1,5 @@
+.Renviron
+.env
+.Rproj.user
+data/input_day1
+data/input_day2
