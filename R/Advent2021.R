@@ -1,8 +1,8 @@
 library(httr)
 library(tidyverse)
 
-getData <- function(day) {
-  content(httr::GET(paste0('https://adventofcode.com/2021/day/',day,'/input'), set_cookies('session'=Sys.getenv('AOC_SESSION'))))
+getData <- function(day, source=NULL) {
+  ifelse(is.null(source),content(httr::GET(paste0('https://adventofcode.com/2021/day/',day,'/input'), set_cookies('session'=Sys.getenv('AOC_SESSION')))),source)
   }
 
 solver <- function(day) {
